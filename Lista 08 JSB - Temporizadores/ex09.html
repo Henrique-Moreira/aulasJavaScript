@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+    <style>
+        #botao {
+            border: 2px solid red;
+            border-radius: 5px;
+            background-color: blue;
+            padding: 5px;
+            font-weight: bold;
+            color: wheat;
+            cursor: pointer;
+            outline-style: none;
+        }
+        .caixa {
+            text-align: center;
+        }
+    </style>
+    <script>
+        tentativa = 0;
+        function carregaConteudo() {
+            carta1 = parseInt(Math.random() * 6) + 1;
+            document.getElementById("img1").src = `img/cartas/carta${carta1}.png`;
+            carta2 = parseInt(Math.random() * 6) + 1;
+            document.getElementById("img2").src = `img/cartas/carta${carta2}.png`;
+            if(carta1 !== carta2) {
+                tentativa ++;
+                document.getElementById("cont").innerHTML = tentativa;
+            } else {
+                alert(`Foram precisas ${tentativa} tentativas!`)
+            }
+       }
+    </script>
+</head>
+<body>
+    <div class="caixa">
+        <img src="" id="img1">
+        <img src="" id="img2">
+        <!-- <img src="img/cartas/cartaVerso.png" id="imgs"> -->
+        <p>Tentativas: <span id="cont">0</span></p>
+        <form action="">
+            <input type="button" id="botao" value="Gerar carta aleatoria" onclick="carregaConteudo()">
+        </form>
+    </div>
+</body>
+</html>

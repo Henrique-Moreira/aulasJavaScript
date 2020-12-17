@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="conteudo">
+    <form>
+        <fieldset>
+            <legend>Acesso ao sistema</legend>
+            <label for="fname">Nome completo:</label>
+            <input type="text" id="fname">
+            <input type="button" value="Entrar" onclick="valida()">
+        </fieldset>
+    </form>
+    </div>
+    <script>
+        alert("Olá, seja bem-vindo!")
+        function valida() {
+            nome = document.getElementById("fname").value;
+            nomes =  nome.split(" ");
+            if(nome != " " && nomes.length >= 2) {
+               localStorage.setItem("nomeUsuario", nome);
+               window.location.assign("menu.html");
+             }
+        }
+    </script>
+</body>
+
+</html>

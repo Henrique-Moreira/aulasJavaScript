@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div class="conteudo">
+        <h1 id="txtMenu"></h1>
+        <input type="button" value="Entrar como convidado" onclick="abreJogo()">
+    </div>
+    <script>
+        nomeCompleto = localStorage.getItem("nomeUsuario");
+        nomes = nomeCompleto.split(" ");
+        fistName = nomes[0];
+        lastName = nomes[nomes.length - 1];
+        teste = "a";
+        document.getElementById("txtMenu").innerHTML = `${fistName} ${lastName}, seja bem-vindo ao jogos dos Felinos!`
+
+        function abreJogo() {
+            window.location.assign("jogo.html");
+        }
+    </script>
+</body>
+</html>

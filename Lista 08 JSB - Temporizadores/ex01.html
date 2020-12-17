@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <script>
+        function transferir() {
+            window.setTimeout(transfereMsg, 2000)
+        }
+        function transfereMsg() {
+            texto = document.getElementById("box1").value;
+            document.getElementById("box1").value = "";
+            document.getElementById("box2").value = texto;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" id="box1" value="Texto aqui">
+        <input type="text" name="" id="box2">
+        <input type="button" value="Transferir texto" onclick="transferir()">
+    </form>
+</body>
+</html>

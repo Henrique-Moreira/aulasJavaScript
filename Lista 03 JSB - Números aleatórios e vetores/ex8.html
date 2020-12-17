@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+    <script>
+    //         Implemente o jogo Joquempô (“Pedra”, “Papel” ou “Tesoura”). A sua solução deverá gerar
+    // automaticamente, após o carregamento da página, a opção de cada jogador (“Pedra”, “Papel”
+    // ou “Tesoura”) e mostrar quem foi o ganhador (JOGADOR 1 ou JOGADOR 2). DESAFIO:
+    // Mostrar a imagem da “mãozinha” sorteada de cada jogador
+    pessoa1 = parseInt(Math.random() * 3 + 1);
+    pessoa2 = parseInt(Math.random() * 3 + 1);
+    if(pessoa1 == 1 && pessoa2 == 2) {
+        document.write("<h1>O jogador 1 venceu!</h1>")
+    }
+    else if (pessoa1 == 1 && pessoa2 == 3){
+        document.write("<h1>O jogador 2 venceu!</h1>")
+    }
+    else if (pessoa1 == pessoa2){
+        document.write("<h1>Empate!!!</h1>")
+    }
+    else if (pessoa1 == 2 && pessoa2 == 1) {
+        document.write("<h1>O jogador 2 venceu!</h1>")
+    }
+    else if (pessoa1 == 2 && pessoa2 == 3) {
+        document.write("<h1>O jogador 1 venceu!</h1>")
+    }
+    else if (pessoa1 == 3 && pessoa2 == 1) {
+        document.write("<h1>O jogador 1 venceu!</h1>")
+    }
+    else if (pessoa1 == 3 && pessoa2 == 2) {
+        document.write("<h1>O jogador 2 venceu!</h1>")
+    }
+    switch (pessoa1) {
+        case 1:
+        document.write(`<img src="/maos/papel1.png">`)
+        break;
+        case 2:
+        document.write(`<img src="/maos/pedra2.png">`)
+        break;
+        case 3:
+        document.write(`<img src="/maos/tesoura3.png">`)
+        break;
+    }
+    switch (pessoa2) {
+        case 1:
+        document.write(`<img src="/maos/papel1.png">`)
+        break;
+        case 2:
+        document.write(`<img src="/maos/pedra2.png">`)
+        break;
+        case 3:
+        document.write(`<img src="/maos/tesoura3.png">`)
+        break;
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

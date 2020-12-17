@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .informes {
+            font-weight: bold;
+        }
+        .primeira {
+            color: red;
+        }
+        .nova {
+            color: rgb(39, 184, 51);
+        }
+    </style>
+    <script>
+    //         Construa uma página web capaz de solicitar ao usuário um texto qualquer e, em seguida,
+    // duas palavras (uma de cada vez). Por último, mostre através de uma caixa de diálogo o texto
+    // inicial alterado, substituindo a ocorrência da primeira palavra informada pelo usuário pela
+    // segunda.
+    texto = prompt("Informe um texto qualquer:");
+    primeira = prompt("Informe a primeira palavra:");
+    novaPalavra = prompt("Informe a segunda palavra:");
+
+    palavras = texto.split(" ");
+    antiga = null;
+    
+    for(i=0; i < palavras.length; i++) {
+        if(palavras[i] === primeira) {
+            antiga = palavras[i];
+            palavras[i] = `<span style="color:rgb(39, 184, 51);">${novaPalavra}</span>`;
+            i = palavras.length
+        }
+    }
+    novaFrase = palavras.join(" ")
+    console.log(novaFrase)
+
+    document.write(`<p class="informes">Informe um texto:</p><p>${texto}</p>`)
+    document.write(`<p class="informes">Informe a primeira palavra:</p><p class="primeira informes">${primeira}</p>`)
+    document.write(`<p class="informes">Informe a segunda palavra:</p><p class="nova informes">${novaPalavra}</p>`)
+    document.write(`<p class="informes">Mensagem final:</p><p>${novaFrase}</p>`)
+    document.write(`<p><span style="font-weight: bold;">OBS:</span> a palavra ${primeira} no texto acima foi substituída pela palavra ${novaPalavra}. Apenas a primeira ocorrência da palavra ${primeira} foi substituída. </p>`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

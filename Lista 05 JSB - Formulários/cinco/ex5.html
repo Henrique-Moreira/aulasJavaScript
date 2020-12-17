@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <h2>Acesso ao sistema</h2>
+            <div class="caixas">
+                <label for="login">Login</label>
+                <input type="text" name="" id="login">
+            </div>
+
+            <div class="caixas">
+                <label for="senha">Senha</label>
+                <input type="password" name="" id="senha" class="password">
+                <span>(max. 8 caracteres)</span>
+            </div>
+
+            <div class="caixas">
+                <label for="confirmSenha">Confirmar Senha</label>
+                <input type="password" name="" id="confirmSenha" class="password">
+                <span>(max. 8 caracteres)</span>
+            </div>
+
+
+            <input type="button" value="Entrar" onclick="verifica()" class="">
+            <input type="reset" value="Limpar" class="">
+            <div id="senhas"></div>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

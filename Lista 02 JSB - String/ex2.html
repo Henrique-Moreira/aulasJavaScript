@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     Construa uma página web capaz de solicitar ao usuário o nome completo dele e, em seguida,
+    // escreva no corpo do documento a quantidade de caracteres contida no nome informado.
+    nomeCompleto = prompt("Insira o seu nome completo"); // inserir o nome completo
+    count = nomeCompleto.split(' '); // dividir o texto nome completo em um array de nomes
+        
+    soma=0 // inicializar um contador
+
+    for(i=0;i < count.length; i++) // usar um for pra ir de palavra em palavra e então ir acumulando a soma no contador
+    soma+=count[i].length;
+
+    document.write(soma); //imprimir a soma
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de data de nascimento</title>
+    <script>
+        function vefificaDataNasc() {
+           text = document.getElementById("inputCNPJ").value;
+           dataValida = /^[0-3]?\d\/[0-1]\d\/([1-2]\d{3}|\d{2})$/;
+           if(dataValida.test(text) == true) {
+              document.getElementById("msg").innerHTML = "Data Válida"  
+           } else {
+            document.getElementById("msg").innerHTML = "Data Inválida" 
+           }
+        }
+     </script>
+</head>
+<body>
+    <div class="geral">
+        <h2>Vefificador de Data de Nascimento</h2>
+        <form action="">
+            <input type="text" id="inputCNPJ" value="20/10/2020">
+            <input type="button"  value="Verificar Data" onclick="vefificaDataNasc()">
+            <p id="msg"></p>
+        </form>
+    </div>
+</body>
+</html>

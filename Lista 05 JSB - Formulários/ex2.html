@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <!-- <style>
+        table, th, td, tr {
+             border: 1px solid black;
+             border-collapse: collapse;
+             margin:auto;
+         }
+        </style> -->
+    <script>
+        function somar() {
+            valor1 = document.getElementById("valor1").value;
+            valor2 = document.getElementById("valor2").value;
+            soma = Number(valor1) + Number(valor2);
+            resultado = (soma > 60 ? "Você foi aprovado(a)!" : "Você foi reprovado(a)!");
+            alert(resultado);
+        }
+        
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="valor1">Nome(1º bimestre): </label>
+        <input type="text" name="" id="valor1">
+        <br><br>
+
+        <label for="valor1">Nome(2º bimestre): </label>
+        <input type="text" name="" id="valor2">
+
+        <br><br>
+        <input type="button" value="Resultado" onclick="somar()">
+    </form>
+</body>
+</html>

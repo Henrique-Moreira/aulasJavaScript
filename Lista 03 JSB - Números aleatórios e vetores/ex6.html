@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+    <script>
+    //         Construa uma página web para gerar e mostrar no corpo do documento uma sugestão de 6
+    // (seis) números da mega sena.
+    
+        globo = [];
+        // Geracao do globo contendo as 60 bolinhas da Mega Sena
+        for (i = 1; i <= 60; i++) globo[i-1]=i;
+
+        //Retirar 6 bolinhas do globo
+        for(i=1; i <= 6; i++) {
+            indice = parseInt(Math.random()*globo.length);
+            bolaSorteada = globo.splice(indice, 1);
+            if(i == 1) document.write("<h1>Sugestão dos 6 números da mega sena: </h1>");
+            if (i < 6)document.write(`<span>${bolaSorteada} - </span>`);
+            else document.write(`<span>${bolaSorteada}</span>`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+    <script>
+        function pegarNumero() {
+            numero = document.getElementById("numbersSelect").value * 1000;
+            window.setTimeout(transfereMsg, numero)
+        }
+        function transfereMsg() {
+            texto = document.getElementById("input1").value;
+            document.getElementById("input1").value = "";
+            document.getElementById("input2").value = texto;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" id="input1" value="Texto">
+        <input type="text" name="" id="input2">
+        <label for="numbers">Selecione um número:</label>
+        <select name="numbers" id="numbersSelect">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <input type="button" value="Selecionar" onclick="pegarNumero()">
+    </form>
+</body>

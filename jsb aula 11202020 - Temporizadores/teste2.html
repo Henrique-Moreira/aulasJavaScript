@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        boyAtual = 1;
+        function play() {
+            cronSlideShow = setInterval(iniciarSlideShow, 1000);
+        }
+        function pause() {
+            clearInterval(cronSlideShow)
+        }
+        function stop() {
+            clearInterval(cronSlideShow)
+            boyAtual = 1;
+            trocarPersonagem(boyAtual)
+        }
+        function iniciarSlideShow() {
+            boyAtual == 4 ? boyAtual = 1 : boyAtual++;
+            trocarPersonagem(boyAtual)
+        }
+        function trocarPersonagem(nroPersonagem) {
+            personagens = ["Pensativo","Assustado","Alegre","Furioso"];
+            document.getElementById("boy").src = `img/boy0${nroPersonagem}.png`;
+            document.getElementById("tipoPersonagem").innerHTML = personagens[nroPersonagem-1]
+        }
+        function posiciona(posicao) {
+            clearInterval(cronSlideShow)
+            boyAtual = posicao
+            trocarPersonagem(boyAtual)
+        }
+        </script>
+</head>
+<body>
+    <img src="img/boy01.png" id="boy">
+    <p id="tipoPersonagem">Pensativo</p>
+    <form action="">
+        <input type="button" value="Primeiro" onclick="posiciona(1)">
+        <input type="button" value="Play" onclick="play()">
+        <input type="button" value="Pause" onclick="pause()">
+        <input type="button" value="Stop" onclick="stop()">
+        <input type="button" value="Ultimo" onclick="posiciona(4)">
+    </form>
+</body>
+</html>

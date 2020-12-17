@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validar() {
+            valor = document.getElementById('txtCodigo').value.trim();
+            // padrao = /^\w{2}\d{2}-\d$/
+             padrao = /^[a-f]{4}$/
+            //  padrao = /^\w{w}\d{2}-\d$/
+             padrao = /^[A-z0-9]\d{2}-\d$/i
+             padrao = /^[^aeiou]\d{2}-\d$/i
+            if (padrao.test(valor)) {
+                alert("valida")
+            } else {
+                alert("invalido");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="">padrão</label>
+        <input type="text" name="" id="txtCodigo" maxlength="4">
+        <input type="button" value="Validar" onclick="validar()">
+    </form>
+</body>
+</html>

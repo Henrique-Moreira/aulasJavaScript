@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        texto = prompt("Insira um texto aqui")
+        qnt = texto.split(' ')
+        alert(qnt.length)
+        // replace 
+        txt = prompt("Informe um texto qualquer:"); //"wilton de paula filho é o wilton professor"
+        palavraAntiga = prompt("Palavra a ser substituida:"); // wilton
+        palavraNova = prompt("Palavra a ser inserida:"); // maria
+
+        vetorPalavras = txt.split(" ");
+
+        for (i=0; i<vetorPalavras.length; i++) {
+            if (vetorPalavras[i] == palavraAntiga)
+                vetorPalavras[i] = palavraNova;
+        }
+        txt = vetorPalavras.join(" ");
+        alert(txt)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

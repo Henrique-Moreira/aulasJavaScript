@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //   Construa uma página web capaz de solicitar um texto ao usuário e imprimir no corpo do
+        // documento todas as palavras iniciadas com a letra ‘a’, seguidas das palavras iniciadas com a
+        // letra ‘b’, e assim sucessivamente. Veja o exemplo abaixo:
+        entrada = prompt("Digite um texto:");
+        palavras = entrada.split(" ").sort();
+
+        letrasUsadas = []
+
+        for (i = 0; i < palavras.length; i++) {
+            letrasUsadas[i] = palavras[i].charAt(0);
+        }
+
+        document.write(`<p>Palavras iniciadas com a letra ${letrasUsadas[0]}:</p>`)
+        document.write(`<ul><li>${palavras[0]}</li></ul>`)
+
+        for (i = 1; i < palavras.length; i++) {
+            if (letrasUsadas[i] !== letrasUsadas[i - 1]) { // letra diferente
+                document.write(`<p>Palavras iniciadas com a letra ${letrasUsadas[i]}:</p>`)
+                document.write(`<ul><li>${palavras[i]}</li></ul>`)
+            } else { //letra igual
+                document.write(`<ul><li>${palavras[i]}</li></ul>`)
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

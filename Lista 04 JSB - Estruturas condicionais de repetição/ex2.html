@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <style>
+       table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin:auto;
+        }
+    </style>
+    <script>
+    // 2. Construa um script para mostrar no corpo do documento de uma página web os códigos e
+    // nomes das disciplinas do 2o período do curso de Tecnologia em Sistemas para Internet do
+    // IFTM campus Uberlândia (MG), conforme mostrado na figura abaixo:
+
+    // Código Disciplina
+    // P2 Projeto Sistema Web MVC e SQL
+    // AP Algoritmos e Programação
+    // POO1 Programação Orientada a Objetos 1
+    // FBD Fundamentos de Banco de Dados
+    // JSB JavaScript Básico
+
+    // OBS: A Tabela deverá estar centralizada horizontalmente em relação a janela do navegador.
+    // DICA: Armazene os códigos em um vetor e os nomes das disciplinas em outro vetor. Na
+    // estrutura repetitiva você irá acessar as informações de ambos os vetores com o mesmo índice. O
+    // resto da lógica agora é com você.
+    codigo = ["P2","AP","POO1","FBD","JSB"];
+    disciplina = ["Projeto Sistema Web MVC e SQL","Algoritmos e Programação","Programação Orientada a Objetos 1","Fundamentos de Banco de Dados","JavaScript Básico"];
+    document.write("<table><tr><th>Código</th><th>Disciplina</th></tr>")
+    for(i=0; i < codigo.length; i++) {
+        document.write(`<tr><td>${codigo[i]}</td><td>${disciplina[i]}</td></tr>`);
+    }
+    document.write("</table>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

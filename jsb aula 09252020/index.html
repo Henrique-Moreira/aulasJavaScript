@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        nome = prompt("Insira o seu nome completo");
+        contador = 0;
+        contadorEspBranco = 0;
+        for(i=0; i< nome.length ; i++) {
+            if(nome.charAt(i)!=" ") {
+                contador++;
+            } else {
+                contadorEspBranco++;
+            }
+        }
+        document.write(`<p>São ${contador} letra(s)</p>`)
+        document.write(`<p>São ${contadorEspBranco} espaço(s) entre a(s) palavra(s)</p>`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

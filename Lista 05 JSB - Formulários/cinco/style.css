@@ -1,0 +1,28 @@
+fieldset h2 {
+    margin: 0px;
+    color: blue;
+    font-size: 24px;
+    font-family: Verdana;
+}
+fieldset {
+    width: 350px;
+    text-align: center;
+    margin: auto;
+}
+.password {
+    width: 60px;
+}
+.caixas {
+    text-align: right;
+    margin-bottom: 5px;
+    /* border: 1px solid red; */
+}
+.caixas span {
+    color: red;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: Verdana;
+}
+#login {
+    width: 175px;
+}

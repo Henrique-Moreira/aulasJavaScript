@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <script>
+        // 1. Construa um script para mostrar no corpo do documento de uma página web o DIA DA
+        // SEMANA. Utilize o seguinte formato: “Hoje é domingo”, “Hoje é segunda-feira”, “Hoje é
+        // terça-feira”, “Hoje é quarta-feira”, ..., “Hoje é sábado”.
+
+        // OBS: Resolva este problema utilizando duas abordagens diferentes:
+        // a) Utilizar Array
+        // b) Utilizar a instrução condicional switch
+
+        // DICA: Pesquise no Google como obter DATAS em JavaScript. Depois, pesquise como obter o
+        // dia da semana. Agora o resto é com você.
+
+        //utilizando array
+        document.write("Utilizando Array: ")
+        data = new Date();
+        semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+        diaAtual = data.getDay();
+        document.write("Hoje é " + semana[diaAtual]);
+
+        // utilizando switch
+        document.write("<p>Utilizando Switch: ")
+        switch (diaAtual) {
+            case 0:
+                document.write("Hoje é Domingo</p>");
+                break;
+            case 1:
+                document.write("Hoje é Segunda-Feira</p>");
+                break;
+            case 2:
+                document.write("Hoje é Terça-Feira</p>");
+                break;
+            case 3:
+                document.write("Hoje é Quarta-Feira</p>");
+                break;
+            case 4:
+                document.write("Hoje é Quinta-Feira</p>");
+                break;
+            case 5:
+                document.write("Hoje é Sexta-Feira</p>");
+                break;
+            case 6:
+                document.write("Hoje é Sábado</p>");
+                break;
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

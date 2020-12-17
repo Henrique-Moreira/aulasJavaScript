@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cadastrar() {
+            nomeForm = document.getElementById("txtNome").value;
+            raForm = document.getElementById("txtRA").value;
+            notaFinalForm = parseFloat(document.getElementById("txtNotaFinal").value);
+
+            aluno = {nome:nomeForm, ra:raForm, notaFinal:notaFinalForm};
+
+            tabAlunos= JSON.parse(localStorage.getItem("tabAlunos"));
+            if(!tabAlunos) tabAlunos = {alunos: []}
+            tabAlunos.alunos.push(aluno);
+
+            localStorage.setItem("tabAlunos", JSON.stringify(tabAlunos));
+
+            alert("Cadastro efetuado com sucesso!!!")
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="">Nome:</label><br>
+        <input type="text" name="" id="txtNome"><br><br>
+
+        <label for="">R.A:</label><br>
+        <input type="text" name="" id="txtRA"><br><br>
+
+        <label for="">Nota final:</label><br>
+        <input type="text" name="" id="txtNotaFinal"><br><br>
+
+        <input type="button" value="Cadastrar" onclick="cadastrar()">
+    </form>
+    <a href="listarAlunos.html">Listar alunos</a>
+</body>
+</html>

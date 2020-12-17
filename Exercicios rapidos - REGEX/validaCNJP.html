@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de CNPJ</title>
+    <script>
+        function vefificaCNPJ() {
+           text = document.getElementById("inputCNPJ").value;
+           CNPJvalido = /^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/;
+           if(CNPJvalido.test(text) == true) {
+              document.getElementById("msg").innerHTML = "CNPJ Válido"  
+           } else {
+            document.getElementById("msg").innerHTML = "CNPJ Inválido" 
+           }
+        }
+     </script>
+</head>
+<body>
+    <h2>Vefificador de CNPJ</h2>
+    <form action="">
+        <input type="text" id="inputCNPJ" value="79.913.501/0001-19">
+        <input type="button"  value="Verificar cnpj" onclick="vefificaCNPJ()">
+        <p id="msg"></p>
+    </form>
+</body>
+</html>

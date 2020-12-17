@@ -1,0 +1,42 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.geral {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 100px; */
+}
+
+.caixas {
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(196,214,147);
+    float: left;
+    border: 2px solid black;
+    margin: 5px;
+}
+.geral h3 {
+    color: red;
+    text-align: center;
+    margin-bottom: -3px;
+}
+
+.caixas:hover {
+    background-color: rgb(165,192,90);
+}
+.conteudo {
+    width: 100%;
+}
+.conteudo p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.votos {
+    color: red;
+    font-size: 25px;
+}

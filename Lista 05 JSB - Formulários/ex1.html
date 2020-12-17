@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <script>
+        function mostrarDobro() {
+            valor1 = document.getElementById("valor1").value;
+            valor1Dobrado = valor1 * 2;
+            document.getElementById("valor2").value = valor1Dobrado;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="valor1">Digite um valor: </label>
+        <input type="text" name="" id="valor1">
+
+        <br><br>
+        <input type="button" value="Mostrar o dobro" onclick="mostrarDobro()">
+
+        <br><br>
+        <label for="valor2">Dobro do valor</label>
+        <input type="text" id="valor2">
+    </form>
+</body>
+</html>

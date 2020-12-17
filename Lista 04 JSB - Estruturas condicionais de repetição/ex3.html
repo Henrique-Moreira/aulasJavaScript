@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <style>
+       table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin:auto;
+        }
+    </style>
+    <script>
+// 3. Refaça o exercício anterior utilizando a estrutura de repetição FOR IN.
+    somatorio = 0;
+    codigo = ["P2","AP","POO1","FBD","JSB"];
+    disciplina = ["Projeto Sistema Web MVC e SQL","Algoritmos e Programação","Programação Orientada a Objetos 1","Fundamentos de Banco de Dados","JavaScript Básico"];
+    document.write("<table><tr><th>Código</th><th>Disciplina</th></tr>")
+    for(somatorio in codigo) {
+        document.write(`<tr><td>${codigo[somatorio]}</td><td>${disciplina[somatorio]}</td></tr>`);
+        somatorio++;
+    }
+    document.write("</table>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

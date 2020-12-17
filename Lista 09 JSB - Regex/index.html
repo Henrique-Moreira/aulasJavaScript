@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+    <script src="js/jwifi.js"></script>
+    <script src="js/valida.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="">
+    <div class="formulario">
+        <h2>Formulario</h2>
+        <div class="camposForms">
+            <label for="dataNascimento">Data de nascimento</label>
+            <input type="text" name="dataNascimento" id="txtData" value="12/12/2121">
+            <input type="button" value="Validar Data" onclick="validar('data')">
+            <img src="" alt="" id="imgValidaData" class="imgValidar">
+        </div>
+
+        <div class="camposForms">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="txtCPF" value="123.456.789-00" onkeypress="inserirMascara('txtCPF', 'xxx.xxx.xxx-xx')">
+        <input type="button" value="Validar CPF" onclick="validar('cpf')">
+        <img src="" alt="" id="imgValidaCPF" class="imgValidar">
+        </div>
+
+        <div class="camposForms">
+            <label for="matricula">Número de matrícula</label>
+            <input type="text" name="matricula" id="txtMatricula" value="IFTM-123/321-3d">
+            <input type="button" value="Validar Número de matrícula" onclick="validar('numMatricula')">
+            <img src="" alt="" id="imgMatricula" class="imgValidar">
+        </div>
+
+        <div class="camposForms">
+            <label for="CDV1">Código da Disciplina V1</label>
+            <input type="text" name="CDV1" id="codDiscV1" value=" mT-12.111-IfTm" onkeypress="inserirMascara('codDiscV1', 'xx-xx.xxx-xxxx')">
+            <input type="button" value="Validar Codigo v1" onclick="validar('codDisciplinaV1')">
+            <img src="" alt="" id="imgCDV1" class="imgValidar">
+        </div>
+
+        <div class="camposForms">
+            <label for="CDV2">Código da Disciplina V2</label>
+            <input type="text" name="CDV1" id="codDiscV2" value=" MT-11.111-IfTm" onkeypress="inserirMascara('codDiscV2', 'xx-xx.xxx-xxxx')">
+            <input type="button" value="Validar Codigo v2" onclick="validar('codDisciplinaV2')">
+            <img src="" alt="" id="imgCDV2" class="imgValidar">
+        </div>
+
+        <div class="camposForms">
+            <label for="CDV3">Código da Disciplina V3</label>
+            <input type="text" name="CDV1" id="codDiscV3" value=" M t-11.111-If Tm">
+            <input type="button" value="Validar Codigo v3" onclick="validar('codDisciplinaV3')">
+            <img src="" alt="" id="imgCDV3" class="imgValidar ">
+        </div>
+
+        <div class="camposForms">
+            <label for="CDV4">Código da Disciplina V4</label>
+            <input type="text" name="CDV4" id="codDiscV4" value=" M t-11.111-If Tm Uberlândia Centro">
+            <input type="button" value="Validar Codigo v4" onclick="validar('codDisciplinaV4')">
+            <img src="" alt="" id="imgCDV4" class="imgValidar">
+        </div>
+
+        <div class="camposForms">
+            <label for="nomeCampusIFTM">Nome do campus do IFTM</label>
+            <input type="text" name="nomeCampusIFTM" id="txtCampus" value="Uberlândia Centro">
+            <input type="button" value="Validar nome" onclick="validar('nomeCampus')">
+            <img src="" alt="" id="imgCampus" class="imgValidar">
+        </div>
+
+        <div class="camposForms">
+            <label for="telV1">Telefone V1</label>
+            <input type="text" name="telV1" id="txtTelefoneV1" value="+55(34)12345-4321" onkeypress="inserirMascara('txtTelefoneV1', '+xx(xx)xxxxx-xxxx')">
+            <input type="button" value="Validar Telefone V1" onclick="validar('telefoneV1')">
+            <img src="" alt="" id="imgTelV1" class="imgValidar ">
+        </div>
+
+        <div class="camposForms">
+            <label for="telV2">Telefone V2</label>
+            <input type="text" name="telV2" id="txtTelefoneV2" value="(034)12345-4321">
+            <input type="button" value="Validar Telefone V2" onclick="validar('telefoneV2')">
+            <img src="" alt="" id="imgTelV2" class="imgValidar ">
+        </div>
+
+        <div class="camposForms">
+            <label for="altura">Altura</label>
+            <input type="text" name="altura" id="txtAltura" value="1,85">
+            <input type="button" value="Validar Altura" onclick="validar('altura')">
+            <img src="" alt="" id="imgAltura" class="imgValidar ">
+        </div>
+
+        <div class="camposForms">
+            <label for="fatAnual">Faturamento anual da empresa</label>
+            <input type="text" name="fatAnual" id="txtFatAnual" value="R$400,85">
+            <input type="button" value="Validar Faturamento" onclick="validar('faturamentoAnual')">
+            <img src="" alt="" id="imgFatAnual" class="imgValidar ">
+        </div>
+
+        <div class="camposForms">
+            <label for="cronometro">Cronometro</label>
+            <input type="text" name="cronometro" id="txtCronometro" value="17:25:41:96" onkeypress="inserirMascara('txtCronometro', 'xx:xx:xx:xx')">
+            <input type="button" value="Validar Cronometro" onclick="validar('cronometro')">
+            <img src="" alt="" id="imgCronometro" class="imgValidar ">
+        </div>
+
+        <div class="camposForms">
+            <label for="senha">Senha</label>
+            <input type="text" name="senha" id="txtSenha" value="321a.&apMb.aei.Ab0-asf+_,/*.cq">
+            <input type="button" value="Validar Senha" onclick="validar('senha')">
+            <img src="" alt="" id="imgSenha" class="imgValidar ">
+        </div>
+    </div>
+    </form>
+</body>
+</html>

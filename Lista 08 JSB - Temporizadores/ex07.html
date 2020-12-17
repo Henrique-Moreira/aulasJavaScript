@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+    <style>
+        #botao {
+            border: 2px solid red;
+            border-radius: 5px;
+            background-color: blue;
+            padding: 5px;
+            font-weight: bold;
+            color: wheat;
+            cursor: pointer;
+            outline-style: none;
+        }
+    </style>
+    <script>
+        function carregaConteudo() {
+            carta = parseInt(Math.random() * 26) + 1;
+            document.getElementById("imgs").src = `img/cartas/carta${carta}.png`;
+        }
+    </script>
+</head>
+<body>
+    <img src="" id="imgs">
+    <!-- <img src="img/cartas/cartaVerso.png" id="imgs"> -->
+    <form action="">
+        <input type="button" id="botao" value="Gerar carta aleatoria" onclick="carregaConteudo()">
+    </form>
+</body>
+</html>

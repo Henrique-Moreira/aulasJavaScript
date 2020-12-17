@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        nome = prompt("Qual o seu primeiro nome?");
+
+        sobrenome = prompt("Qual o seu sobrenome?");
+
+        repeticao = Number(prompt("Quantas vezes você quer que repita o seu nome?"));
+
+        alert("Escolha 3 numeros de 1 a 255 para definir a cor alternada do seu nome!")
+
+        r = prompt("numero para a primeira cor:")
+        while(r < 1 || r > 255)
+        r = prompt("voce nao entendeu ! insira um numero entre 1 e 255:")
+
+        g = prompt("numero para a segunda cor:")
+        while(g < 1 || g > 255)
+        g = prompt("voce nao entendeu ! insira um numero entre 1 e 255:")
+
+        b = prompt("numero para a terceira cor:")
+        while(b < 1 || b > 255)
+        b = prompt("voce nao entendeu ! insira um numero entre 1 e 255:")
+
+        for (i=1; i<=repeticao; i++)
+        if(i%2 ==  1)
+        document.write(`<p style='color: rgb(${r}, ${g}, ${b});'>${i} - ${nome} ${sobrenome}</p>`)
+        else
+        document.write(`<p>${i} - ${nome} ${sobrenome}</p>`)
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

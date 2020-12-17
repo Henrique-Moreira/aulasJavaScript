@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/acesso.css">
+    <link rel="icon" href="./img/favicon.png" type="image">
+    <script>
+        function entrarJogo() {
+            user = document.getElementById("txtuser").value;
+            SenhaForm = document.getElementById("txtSenha").value;
+
+            if (user == "") {
+                alert("Insira um e-mail, campo em branco!")
+            } else if (SenhaForm == "") {
+                alert("Insira uma senha, campo em branco!")
+            } else {
+            if (typeof (Storage) != "undefined") {
+                senhaGravada = localStorage.getItem(user);
+
+                if (senhaGravada == null) { // ver se existe o usuário
+                    alert("Usuário inexistente. Tente outro usuário.")
+                }
+                else {
+                    if(SenhaForm == senhaGravada) {
+                        window.open('jogo.html', '_self')
+                    }
+                    else alert("Usuário existente, porém senha inválida.")
+                }
+            }
+            else {
+                alert("Navegador antigo. Não oferece suporte ao armazenamento local.")
+            }
+            }
+        }
+        // botao sair => window.close() => ir pra tela de login
+    </script>
+</head>
+
+<body>
+    <form class="box">
+        <h2>LOGIN</h2>
+        <input type="text" name="" id="txtuser" placeholder="E-mail">
+        <input type="password" name="" id="txtSenha" placeholder="Senha">
+
+        <input type="button" value="Login" onclick="entrarJogo()" required="index.html">
+        <a href="cadastro.html"><p>QUERO ME CADASTRAR</p></a>
+    </form>
+</body>
+
+</html>

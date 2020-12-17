@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            text-decoration: underline;
+        }
+        span {
+            background-color: gray;
+        }
+    </style>
+    <script>
+    //         . Crie uma página web capaz de sortear a ordem de apresentação de um grupo de pessoas a
+    // partir das seguintes informações: número de pessoas e o nome de cada uma delas. Após a
+    // entrada dessas informações a página deverá ser capaz de exibir ao usuário, no corpo do
+    // documento, a sequência das apresentações, conforme mostrado na imagem a seguir:
+    nro = parseInt(prompt("Insira o número de pessoas"));
+    nomes = [];
+    for(i = 0; i < nro; i++) {
+        nomes[i] = prompt(`Insira o nome da pessoa ${i+1}`)
+    }
+    document.write("<span>")
+    for(i = 0; i < nro; i++) {
+        indiceSorteado = parseInt(Math.random()*nomes.length);
+        pessoa = nomes.splice(indiceSorteado, 1);
+        console.log(pessoa)
+        console.log(indiceSorteado)
+        console.log(nomes)
+        if(i == 0)document.write(`<h1>ORDEM DA APRESENTAÇÃO DOS GRUPOS</h1>`);
+        document.write(`<p>${i+1} - ${pessoa}</p>`);
+    }
+    document.write("</span>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

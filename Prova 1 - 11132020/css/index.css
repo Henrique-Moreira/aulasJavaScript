@@ -1,0 +1,47 @@
+.conteudo {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    color: green;
+    border: 3px solid green;
+    width: 500px;
+    height: 130px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.conteudo input[type = "button"] {
+    background-color: green;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.conteudo input[type = "text"] {
+    border: 0px;
+    border-bottom: 2px solid green;
+    width: 300px;
+    color: green;
+    outline: none;
+}
+
+legend {
+    color: green;
+    /* font-weight: bold; */
+    font-size: 20px;
+}

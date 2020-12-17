@@ -1,0 +1,17 @@
+.conteudo {
+    text-align: center;
+}
+
+.conteudo h1 {
+    color: green;
+}
+
+.conteudo input {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 15px;
+    width: 400px;
+    height: 35px;
+}

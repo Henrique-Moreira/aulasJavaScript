@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <link rel="stylesheet" href="./css/ex2.css">
+    <script>
+        function votos(candidato) {
+            document.getElementById(`${candidato}`).innerHTML++;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="geral">
+        <div class="card">
+            <h3>CANDIDADO 1</h3>
+            <div id="box" class="caixas" onmousedown="votos('mickey')">
+                <div class="conteudo">
+                    <p>Mickey</p>
+                    <img src="./img/ex2/candidato1.jpg" alt="" srcset="">
+                    <p>Número de votos: <span id="mickey" class="votos">0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>CANDIDADO 2</h3>
+            <div id="box" class="caixas" onmousedown="votos('minnie')">
+                <div class="conteudo">
+                    <p>Minnie</p>
+                    <img src="./img/ex2/candidato2.jpg" alt="" srcset="">
+                    <p>Número de votos: <span id="minnie" class="votos">0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>CANDIDADO 3</h3>
+            <div id="box" class="caixas" onmousedown="votos('pluto')">
+                <div class="conteudo">
+                    <p>Pluto</p>
+                    <img src="./img/ex2/candidato4.jpg" alt="" srcset="">
+                    <p>Número de votos: <span id="pluto" class="votos">0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>CANDIDADO 4</h3>
+            <div id="box" class="caixas" onmousedown="votos('pateta')">
+                <div class="conteudo">
+                    <p>Pateta</p>
+                    <img src="./img/ex2/candidato3.jpg" alt="" srcset="">
+                    <p>Número de votos: <span id="pateta" class="votos">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de codigo de disciplina</title>
+    <script>
+        function vefificaCodigo() {
+           text = document.getElementById("inputCNPJ").value;
+           codValido = /^M\s?T-[A-F]-(\d{2}\.)?\d{3}-I\s?F\s?T\s?M$/i;
+           if(codValido.test(text) == true) {
+              document.getElementById("msg").innerHTML = "Codigo valido"  
+           } else {
+              document.getElementById("msg").innerHTML = "Codigo invalido" 
+           }
+        }
+     </script>
+</head>
+<body>
+    <div class="geral">
+        <h2>Verificador de Codigo da Disciplina</h2>
+        <form action="">
+            <input type="text" id="inputCNPJ" value="MT-A-222-IFTM">
+            <input type="button"  value="Verificar Codigo" onclick="vefificaCodigo()">
+            <p id="msg"></p>
+        </form>
+    </div>
+</body>
+</html>

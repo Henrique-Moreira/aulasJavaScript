@@ -1,0 +1,78 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background-color:#010b16;
+}
+
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    background-color: rgb(35, 34, 41);
+    transform: translate(-50%), -50%;
+    text-align: center;
+    box-shadow: 0 0 30px white, 0 0 20px #0000FF;
+    border-radius: 50px;
+}
+
+.box input[type = "text"], .box input[type = "password"] {
+    border: 0px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #81cfe0;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transform: 0.25s;
+}
+
+.box h2 {
+    color: white;
+    font-weight: 500px;
+}
+
+.box input[type = "text"]:focus, .box input[type = "password"]:focus {
+    width: 210px;
+    border-color: #29f1c3;
+    box-shadow: 0 0 30px white, 0 0 20px #0000FF;
+}
+
+.box input[type = "button"], .box input[type = "reset"]{
+    border: 0px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #29f1c3;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transform: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type = "button"]:hover, .box input[type = "reset"]:hover {
+    background: #29f1c3;
+    box-shadow: 0 0 30px white, 0 0 20px #0000FF;
+}
+
+.box a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.box a:hover {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.678);
+    background: #29f1c3;
+    box-shadow: 0 0 30px white, 0 0 20px #0000FF;
+}

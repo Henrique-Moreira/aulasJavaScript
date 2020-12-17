@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.png" type="image">
+    <link rel="stylesheet" href="./css/jogo.css">
+    <script>
+        function interacao(estado) {
+            if (estado == 3) {
+                nome = prompt("Qual o seu nome?")
+                document.getElementById("pensativo").src = `img/alegre.png`
+                document.getElementById("texto").innerHTML = `${nome}, vamos brincar?`;
+            } else {
+                imagens = ["assustado", "pensativo", "nervoso"]
+                textos = ["O que voce quer ?", "ZzZzZzZ", "Nao me aperte !!!"]
+                document.getElementById("pensativo").src = `img/${imagens[estado]}.png`
+                document.getElementById("texto").innerHTML = `${textos[estado]}`;
+            }
+        }
+        function sair() {
+            sair = confirm("Deseja realmente sair do jogo?")
+            if (sair == true) {
+                window.location.assign("index.html");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="sair()">
+        <p>SAIR</p>
+    </button>
+    <div class="caixa">
+        <div class="visor">
+            <img id="pensativo" src="img/pensativo.png" alt="" onmouseover="interacao(0)" onmouseout="interacao(1)"
+                onmousedown="interacao(2)" onmouseup="interacao(3)">
+            <p id="texto">ZzZzZzZ</p>
+        </div>
+        <span class="botoes"></span>
+        <span class="botoes"></span>
+</body>
+
+</html>

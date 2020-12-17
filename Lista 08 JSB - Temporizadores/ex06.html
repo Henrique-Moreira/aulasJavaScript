@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+    <script>
+        function carregaConteudo() {
+            carta = parseInt(Math.random() * 26) + 1;
+            document.getElementById("imgs").src = `img/cartas/carta${carta}.png`;
+        }
+    </script>
+</head>
+<body onload="carregaConteudo()">
+    <img src="" id="imgs">
+</body>
+</html>

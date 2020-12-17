@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function listarAlunos() {
+            tabAlunos = JSON.parse(localStorage.getItem("tabAlunos"));
+            if (!tabAlunos) alert("Não há alunos cadastrados");
+            else {
+                main = document.querySelector("main");
+                for (i = 0; tabAlunos.alunos.length; i++) {
+                    paragrafo = document.createElement("p");
+                    paragrafo.textContent = tabAlunos.alunos[i].nome;
+                    main.appendChild(paragrafo);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="listarAlunos()">
+    <header>
+        <h1> Lista de todos os alunos matriculados</h1>
+    </header>
+    <main>
+    </main>
+</body>
+</html>

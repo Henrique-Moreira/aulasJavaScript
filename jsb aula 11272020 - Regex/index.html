@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ^ => a string tem que começar com o padrao
+        // $ => a string tem que acabar com o padrao
+        // \d => pelo menos um numero
+        // \d\d => dois numeros grudados
+        // a cada \d eu vou adicionando a obrigatoriedade de ter mais um numero grudado com o outro
+        // \w => ou letra ou numero
+        // i no final do regex é um modificador, 
+        function validar() {
+            // padrao = /^\w\w$/;
+            // padrao = /^IFTM-\d{4}$/i;
+            // padrao = /^\d{2}\/\d{2}\/\d{4}$/ // data de aniversario dd/mm/aaaa
+            padrao = /^\(\d{2}\)\d{5}-\d{4}$/ // telefone (xx)xxxxx-xxxx
+            input = document.getElementById("txtCodigo").value;
+            if(padrao.test(input) == true) {
+                alert("valida")
+            }
+            else alert("invalida");
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="">Telefone celular:</label>
+        <input type="text" name="" id="txtCodigo">
+        <input type="button" value="Validar" onclick="validar()">
+    </form>
+</body>
+</html>

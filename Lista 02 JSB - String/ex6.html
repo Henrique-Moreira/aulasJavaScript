@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //     Construa uma página web capaz de solicitar um texto e informar no corpo do documento a
+        // concatenação da primeira com a última palavra do texto (deve haver um espaço entre as
+        // palavras).
+        texto = prompt("Insira um texto aqui");
+        count = texto.split(' ');
+        if ((count != "") && (count != null)) {
+
+            if (count.length > 1) {
+                document.write(`<h1>${count[0]} ${count[count.length - 1]}</h1>`);
+            } else {
+                document.write(`<h1>${count[0]}</h1>`);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     Construa uma página web para exibir no corpo da página (document.write) um número
+    // aleatório entre N e M, onde N e M deverão ser informados pelo usuário.
+    min = Number(prompt("Digite um número(menor)"));
+    max = Number(prompt("Agora digite outro número(maior)"));
+    document.write(`<p>Número entre ${min} e ${max} = ${parseInt(Math.random() * (max - min + 1)) + min}</p>`)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

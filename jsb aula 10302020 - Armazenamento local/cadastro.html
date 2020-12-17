@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/acesso.css">
+    <link rel="icon" href="./img/favicon.png" type="image">
+    <script>
+        // Armazenamento local
+        function cadastrarUser() {
+            user = document.getElementById("txtuser").value;
+            pwd = document.getElementById("txtSenha").value;
+            pwd2 = document.getElementById("txtSenha2").value;
+            console.log(pwd)
+            console.log(pwd2)
+            if (pwd === pwd2) {
+                if (user == "") {
+                    alert("Insira um e-mail, campo em branco!")
+                } else if (pwd == "") {
+                    alert("Insira uma senha, campo em branco!")
+                } else if (pwd.length < 5) {
+                    alert("Senha inválida. Informe uma senha contendo pelo menos 5 caracteres.")
+                } else {
+                    if (typeof (Storage) != "undefined") {
+                        senha = localStorage.getItem(user);
+
+                        if (senha == null) { // n achou a chave correspondente ao nome do usuario
+                            localStorage.setItem(user, pwd)
+                            alert("Usuário cadastrado com sucesso!")
+                            window.location.assign("index.html");
+                        }
+                        else {
+                            alert("Usuário já existente. Tente outro.")
+                        }
+                    }
+                    else {
+                        alert("Navegador antigo. Não oferece suporte ao armazenamento local.")
+                    }
+                }
+            } else {
+                alert("As senhas não correspondem, insira novamente.")
+                document.getElementById("txtSenha").value = "";
+                document.getElementById("txtSenha2").value = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form class="box">
+        <h2>CADASTRO DE USUÁRIO</h2>
+        <input type="text" name="" id="txtuser" placeholder="E-mail">
+        <input type="password" name="" id="txtSenha" placeholder="Senha">
+        <input type="password" name="" id="txtSenha2" placeholder="Confirme a senha">
+
+        <input type="button" value="Cadastrar" onclick="cadastrarUser()">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+
+</html>

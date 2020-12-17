@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     Construa uma página web capaz de solicitar ao usuário um texto qualquer e, em seguida,
+    // informe-o, através de uma mensagem de alerta, a quantidade de palavras contidas no texto.
+    nomeCompleto = prompt("Insira um texto qualquer")
+    count = nomeCompleto.split(" ")
+    soma = 0;
+    for(i=0; i<count.length;i++) {
+        if(nomeCompleto[i] != "") {
+            soma++;
+        }
+    }
+    alert(soma + " palavras contidas no seu texto")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

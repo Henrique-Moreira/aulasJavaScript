@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE EM SALA DE AULA</title>
+    <script>
+        quantidade = Number(prompt("Quantas pessoas vão entrar no onibus?"));
+        somatoria = 0;
+        for(i = 0; i < quantidade; i++) {
+            idade = Number(prompt(`Qual a idade da ${i+1}ª pessoa?`));
+            somatoria += idade;
+        }
+        alert("A media das idades é de " + parseInt(somatoria/quantidade) + " anos");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

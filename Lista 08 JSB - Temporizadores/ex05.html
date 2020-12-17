@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <span id="text"></span>
+    <script>
+        usuarioAtual = 0;
+        n = prompt("Insira a quantidade de usuários:")
+        usuarios = []
+        for(i = 0; i < n; i++) {
+            usuarios[i] = prompt(`Insira o nome do ${i+1}º usuário`)
+        }
+        cronometro = setInterval(addUsuarios, 1000)
+        function addUsuarios() {
+            atual = document.getElementById("text").innerHTML;
+            if(usuarioAtual < n) {
+                document.getElementById("text").innerHTML = `${atual}<p>${usuarios[usuarioAtual]}</p>`
+                usuarioAtual++;
+            } else {
+                clearInterval(cronometro)
+            }
+        }
+    </script>
+</body>
+</html>

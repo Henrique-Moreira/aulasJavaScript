@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Avaliação 2</title>
+    <script>
+        carroAtual = 0;
+        carros = ["civic", "corola", "focus"];
+        potencias = ["140 cv", "155 cv", "172 cv"]
+        garantias = ["3 anos", "3 anos", "5 anos"]
+        consumos = ["9,2 km", "não informado", "8,5 km/l"]
+        cronometro = setInterval(alteraDados, 2000);
+
+        function alteraDados() {
+            carroAtual == 2 ? carroAtual = 0 : carroAtual++;
+            document.getElementById("carro").src = `img/${carros[carroAtual]}.jpg`;
+            document.getElementById("nome").innerHTML = `${carros[carroAtual][0].toUpperCase() + carros[carroAtual].slice(1)}`
+            document.getElementById("potencia").innerHTML = `${potencias[carroAtual]}`
+            document.getElementById("garantia").innerHTML = `${garantias[carroAtual]}`
+            document.getElementById("consumo").innerHTML = `${consumos[carroAtual]}`
+        }
+        function paralisa() {
+            clearInterval(cronometro);
+        }
+        function inicia() {
+            cronometro = setInterval(alteraDados, 2000);
+        }
+    </script>
+</head>
+<body>
+    <h2>Lançamentos 2014 - Carros sedãs</h2>
+    <div class="geralBox">
+        <div class="carrosBox">
+            <img src="img/civic.jpg" alt="" id="carro" onclick="stop()" onmouseover="paralisa()" onmouseout="inicia()">
+        </div>
+        <div class="caracteristicasBox">
+            <h3>Características do carro: </h3>
+            <ul>
+                <li><b>Nome:</b> <span id="nome">Civic</span></li>
+                <li><b>Potência do motor:</b> <span id="potencia"> 140 cv</span></li>
+                <li><b>Garantia:</b> <span id="garantia"> 3 anos</span></li>
+                <li><b>Consumo (cidade):</b> <span id="consumo"> 9,2 km/l</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

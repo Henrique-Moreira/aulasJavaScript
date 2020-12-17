@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+ 
+</head>
+<body>
+    <p id="text" style="font-size: 14px;"></p>
+    <script>
+        tamanhoAtual = 14;
+        nomeCompleto = prompt("Qual é o seu nome completo?");
+        document.getElementById("text").innerHTML = nomeCompleto;
+        cronometro = setInterval(incrementarFont, 500)
+        function incrementarFont() {
+            tamanhoAtual+= 2
+            tamanhoAtual < 40 ? document.getElementById("text").style.fontSize = `${tamanhoAtual}px` : clearInterval(cronometro);
+        }
+    </script>
+</body>
+</html>

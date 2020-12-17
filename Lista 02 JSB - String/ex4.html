@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     Construa uma página web capaz de solicitar o nome completo do usuário e, em seguida,
+    // exiba, através de uma mensagem de alerta, o primeiro nome dele contendo letras maiúsculas
+    // e o restante composto apenas por letras minúsculas.
+    nomeCompleto = prompt("Insira o seu nome completo")
+    nomes = nomeCompleto.split(' ');
+
+    nomes[0] = nomes[0].toUpperCase();
+    for(i=0; i<nomes.length;i++) {
+        if(i !== 0) {
+            nomes[i] = nomes[i].toLowerCase();
+        }
+    }
+    alert(nomes.join(" "))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

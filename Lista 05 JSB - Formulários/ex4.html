@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <style>
+        fieldset {
+            width: 150px;
+            height: 130px;
+            background-color: rgb(70, 206, 161);
+            margin: auto;
+            border-radius: 20px;
+            border: 0px solid black;
+        }
+
+        fieldset legend {
+            font-weight: bold;
+            background-color: rgb(70, 206, 161);
+            border-radius: 5px;
+        }
+
+        #valor1,
+        #valor2 {
+            width: 60px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        #resultado {
+            width: 47px;
+            border-radius: 5px;
+        }
+
+        .buttons {
+            width: 25px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            background-color: rgb(172, 7, 7);
+            color: white;
+            border: 0px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function calcula(operador) {
+            valor1 = document.getElementById("valor1").value;
+            valor2 = document.getElementById("valor2").value;
+            switch (operador) {
+                case "+":
+                    document.getElementById("resultado").value = Number(valor1)+Number(valor2);
+                    break;
+                case "-":
+                    document.getElementById("resultado").value = Number(valor1)-Number(valor2);
+                    break;
+                case "*":
+                    document.getElementById("resultado").value = Number(valor1)*Number(valor2);
+                    break;
+                case "/":
+                    divisao();
+                    break;
+            }
+            function divisao() {
+            if(valor2 == 0) alert("Não existe divisão por 0! Tente novamente inserindo um divisor diferente de 0.");
+            else document.getElementById("resultado").value = Number(valor1)/Number(valor2);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Calculadora</legend>
+            <label for="valor1">1º Valor:</label>
+            <input type="text" name="" id="valor1">
+            <br>
+
+            <label for="valor2">2º Valor:</label>
+            <input type="text" name="" id="valor2">
+
+            <br>
+            <input type="button" value="+" onclick="calcula(this.value)" class="buttons" id="soma">
+            <input type="button" value="-" onclick="calcula(this.value)" class="buttons" id="subtrai">
+            <input type="button" value="*" onclick="calcula(this.value)" class="buttons" id="multiplica">
+            <input type="button" value="/" onclick="calcula(this.value)" class="buttons" id="divide">
+
+            <br>
+            <label for="resultado">Resultado:</label>
+            <input type="text" id="resultado">
+        </fieldset>
+    </form>
+</body>
+
+</html>

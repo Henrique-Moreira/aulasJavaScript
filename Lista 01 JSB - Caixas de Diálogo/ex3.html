@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     Crie uma página web capaz de solicitar ao usuário o nome completo dele. Em seguida, peça a
+    // ele para informar a idade. Por último, informe-o, através de uma mensagem de diálogo, se ele
+    // já possui idade suficiente para tirar carteira de motorista. Utilize o formato para exibir a
+    // mensagem final: FULANO, você já POSSUI idade para tirar carteira ou FULANO, você ainda
+    // NÃO POSSUI idade para tirar carteira, ainda falta(m) X anos.
+        nome = prompt("Insira o seu nome completo:");
+        idade = parseInt(prompt("Insira sua idade"));
+        if (idade >= 18)
+            alert(nome + ", você já POSSUI idade para tirar carteira")
+        else
+        maioridade = 18-idade;
+            alert(nome + ", você NÃO POSSUI idade para tirar carteira, ainda falta(m) " + maioridade + " ano(s)")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
