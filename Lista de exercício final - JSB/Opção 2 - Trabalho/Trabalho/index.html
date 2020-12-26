@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Informe o seu perfil</title>
+    <link rel="stylesheet" type="text/css" href="css/restom.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body onload="carrega()">
+    <h1 class="titulo">Qual o seu perfil?</h1>
+    <div class="col-dg-12 formulario">
+            <form action="">
+            <p class="aviso">OBS: Todas as informações são de preenchimento obrigatório</p>
+            <div class="col-dg-12">
+                <label for="">Nome</label>
+                <input type="text" name="" id="txtNome" required>
+            </div>
+            <div class="col-dg-12 col-dm-12">
+                <div class="col-dg-4 col-dm-4">
+                    <label for="">Idade</label>
+                    <input type="number" name="" id="txtIdade" required>
+                </div>
+                <div class="col-dg-8 col-dm-8">    
+                    <label for="">Qual o seu passamento predileto ?</label>
+                    <select name="" id="selectPassatempo">
+                        <option value="a">Selecione</option>
+                        <option value="b">Passear no shopping (fazer compras, etc)</option>
+                        <option value="c">Curtir a natureza (cachoeira, etc)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-dg-12 col-dm-12">
+                <div class="col-dg-3 col-dm-3"></div>
+                <div class="col-dg-3 col-dm-3 buttons">
+                    <input type="button" value="Ver opções de carro" onclick="validaInformacoes()">
+                </div>
+                <div class="col-dg-3 col-dm-3 buttons">
+                    <input type="reset" value="Limpar">
+                </div>
+                <div class="col-dg-3"></div>
+            </div>
+        </form>
+    </div>
+    <script src="js/funcoes.js"></script>
+</body>
+
+</html>
